@@ -7,9 +7,11 @@ void ofApp::setup(){
     
     // Initialize the phase congruency detector with 4 scales and 6 orientations
     pc.setup(inputImage.getWidth(), inputImage.getHeight(), 4, 6);
-    
+
+	auto t = ofGetElapsedTimeMillis();
     // Process the image
     pc.process(inputImage, edgeImage, cornerImage);
+	ofLogNotice("ofApp") << "Processing time (ms): " << (ofGetElapsedTimeMillis() - t);
     
     // Set window title
     ofSetWindowTitle("Phase Congruency Example");
