@@ -1,2 +1,3 @@
-ofxPhaseCongruencyEdge
 ofxOpenCv
+ofxCv
+ofxPhaseCongruencyEdge

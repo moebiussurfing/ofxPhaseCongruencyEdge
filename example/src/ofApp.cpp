@@ -95,7 +95,7 @@ void ofApp::gotMessage(ofMessage msg){
 void ofApp::dragEvent(ofDragInfo dragInfo){ 
     // Allow drag & drop of images
     if(dragInfo.files.size() > 0){
-        string filePath = dragInfo.files[0];
+        string filePath = dragInfo.files[0].string();
         ofFile file(filePath);
         
         if(file.exists() && (ofToLower(file.getExtension()) == "jpg" || 
